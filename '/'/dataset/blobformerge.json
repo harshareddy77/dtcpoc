@@ -1,5 +1,5 @@
 {
-	"name": "blobforsqlserver",
+	"name": "blobformerge",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorage",
@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": "sqlserver"
+				"container": "dtcpoc"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
