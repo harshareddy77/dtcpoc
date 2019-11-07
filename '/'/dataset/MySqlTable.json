@@ -1,0 +1,16 @@
+{
+	"name": "MySqlTable",
+	"properties": {
+		"description": "emp table",
+		"linkedServiceName": {
+			"referenceName": "MySql",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "MySqlTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "`emp`"
+		}
+	}
+}
