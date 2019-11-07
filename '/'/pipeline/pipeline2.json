@@ -74,7 +74,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "filesofbothmysqlandsqlserver",
+						"referenceName": "sqlserverblob",
 						"type": "DatasetReference"
 					}
 				]

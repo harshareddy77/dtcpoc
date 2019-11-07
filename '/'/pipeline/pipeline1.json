@@ -30,7 +30,42 @@
 							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "id",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "id",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "age",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "age",
+									"type": "Int32"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
@@ -40,7 +75,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "filesofbothmysqlandsqlserver",
+						"referenceName": "mysqlblob",
 						"type": "DatasetReference"
 					}
 				]
