@@ -5,6 +5,9 @@
 			"referenceName": "SqlServer",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "dtcpoc"
+		},
 		"annotations": [],
 		"type": "SqlServerTable",
 		"schema": [

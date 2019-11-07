@@ -6,6 +6,9 @@
 			"referenceName": "MySql",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "dtcpoc"
+		},
 		"annotations": [],
 		"type": "MySqlTable",
 		"schema": [],
