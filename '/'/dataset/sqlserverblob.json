@@ -13,6 +13,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"folderPath": {
+					"value": "@utcnow()",
+					"type": "Expression"
+				},
 				"container": "sqlserver"
 			},
 			"columnDelimiter": ",",
