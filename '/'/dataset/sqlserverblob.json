@@ -14,7 +14,7 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"folderPath": {
-					"value": "@utcnow()",
+					"value": "@concat('sqldatabase''utcnow()')",
 					"type": "Expression"
 				},
 				"container": "sqlserver"
