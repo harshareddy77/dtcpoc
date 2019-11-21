@@ -58,8 +58,7 @@
 								"referenceName": "pipeline4",
 								"type": "PipelineReference"
 							},
-							"waitOnCompletion": true,
-							"parameters": {}
+							"waitOnCompletion": true
 						}
 					}
 				],

@@ -974,11 +974,20 @@
 								"type": "PipelineReference"
 							},
 							"waitOnCompletion": true,
-							"parameters": {}
+							"parameters": {
+								"Table_Name": {
+									"value": "@{pipeline().parameters.Table_Name}",
+									"type": "Expression"
+								},
+								"windowStart": {
+									"value": "@utcnow()",
+									"type": "Expression"
+								}
+							}
 						}
 					},
 					{
-						"name": "databricks notebok",
+						"name": "Execute Pipeline1",
 						"type": "ExecutePipeline",
 						"dependsOn": [
 							{
@@ -999,6 +1008,14 @@
 						}
 					}
 				],
+				"parameters": {
+					"Table_Name": {
+						"type": "string"
+					},
+					"windowStart": {
+						"type": "string"
+					}
+				},
 				"annotations": []
 			},
 			"dependsOn": [
