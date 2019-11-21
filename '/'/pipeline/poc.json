@@ -1,0 +1,41 @@
+{
+	"name": "poc",
+	"properties": {
+		"activities": [
+			{
+				"name": "copy from sql server to data lake",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pipeline5",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "databricks notebok",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "copy from sql server to data lake",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pipeline4",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"annotations": []
+	}
+}
