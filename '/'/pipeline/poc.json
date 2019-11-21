@@ -36,6 +36,14 @@
 				}
 			}
 		],
+		"parameters": {
+			"Table_Name": {
+				"type": "string"
+			},
+			"windowStart": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
