@@ -17,12 +17,15 @@
 				"typeProperties": {
 					"source": {
 						"type": "SqlServerSource",
-						"sqlReaderQuery": "SELECT * FROM @{pipeline().parameters.Table_Name}"
+						"sqlReaderQuery": {
+							"value": "SELECT * FROM @{pipeline().parameters.Table_Name}",
+							"type": "Expression"
+						}
 					},
 					"sink": {
 						"type": "DelimitedTextSink",
 						"storeSettings": {
-							"type": "AzureBlobFSWriteSettings"
+							"type": "AzureDataLakeStoreWriteSettings"
 						},
 						"formatSettings": {
 							"type": "DelimitedTextWriteSettings",
