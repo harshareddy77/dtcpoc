@@ -23,6 +23,18 @@
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://pocofdf.dfs.core.windows.net"
 		},
+		"AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri": {
+			"value": "https://harsha.azuredatalakestore.net/webhdfs/v1"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_tenant": {
+			"value": "93f33571-550f-43cf-b09f-cd331338d086"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_subscriptionId": {
+			"value": "db282dfb-bf66-4f42-acad-38a869fd392a"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_resourceGroupName": {
+			"value": "datafactory"
+		},
 		"localIR_properties_typeProperties_linkedInfo_resourceId": {
 			"value": "/subscriptions/db282dfb-bf66-4f42-acad-38a869fd392a/resourcegroups/datafactory/providers/Microsoft.DataFactory/factories/practicing/integrationruntimes/integrationRuntime"
 		}
