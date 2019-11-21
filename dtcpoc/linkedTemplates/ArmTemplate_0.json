@@ -115,7 +115,7 @@
 						"type": "SecureString",
 						"value": "[parameters('AzureDatabricks1_accessToken')]"
 					},
-					"existingClusterId": "1120-065716-giddy1"
+					"existingClusterId": "1121-101917-flags542"
 				}
 			},
 			"dependsOn": []
@@ -167,7 +167,7 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"notebookPath": "/refer"
+							"notebookPath": "/azure-datalake"
 						},
 						"linkedServiceName": {
 							"referenceName": "AzureDatabricks1",
@@ -320,6 +320,7 @@
 					},
 					"columnDelimiter": ",",
 					"escapeChar": "\\",
+					"firstRowAsHeader": true,
 					"quoteChar": "\""
 				},
 				"schema": []
@@ -572,8 +573,8 @@
 											"type": "Int32"
 										},
 										"sink": {
-											"type": "Int32",
-											"ordinal": 1
+											"name": "ProductID",
+											"type": "Int32"
 										}
 									},
 									{
@@ -582,8 +583,8 @@
 											"type": "String"
 										},
 										"sink": {
-											"type": "String",
-											"ordinal": 2
+											"name": "Name",
+											"type": "String"
 										}
 									},
 									{
@@ -592,8 +593,8 @@
 											"type": "String"
 										},
 										"sink": {
-											"type": "String",
-											"ordinal": 3
+											"name": "ProductNumber",
+											"type": "String"
 										}
 									},
 									{
@@ -602,8 +603,8 @@
 											"type": "String"
 										},
 										"sink": {
-											"type": "String",
-											"ordinal": 4
+											"name": "Color",
+											"type": "String"
 										}
 									},
 									{
@@ -612,8 +613,8 @@
 											"type": "Decimal"
 										},
 										"sink": {
-											"type": "Decimal",
-											"ordinal": 5
+											"name": "StandardCost",
+											"type": "Decimal"
 										}
 									},
 									{
@@ -622,8 +623,8 @@
 											"type": "Decimal"
 										},
 										"sink": {
-											"type": "Decimal",
-											"ordinal": 6
+											"name": "ListPrice",
+											"type": "Decimal"
 										}
 									},
 									{
@@ -632,8 +633,8 @@
 											"type": "String"
 										},
 										"sink": {
-											"type": "String",
-											"ordinal": 7
+											"name": "Size",
+											"type": "String"
 										}
 									},
 									{
@@ -642,8 +643,8 @@
 											"type": "Decimal"
 										},
 										"sink": {
-											"type": "Decimal",
-											"ordinal": 8
+											"name": "Weight",
+											"type": "Decimal"
 										}
 									},
 									{
@@ -652,8 +653,8 @@
 											"type": "Int32"
 										},
 										"sink": {
-											"type": "Int32",
-											"ordinal": 9
+											"name": "ProductCategoryID",
+											"type": "Int32"
 										}
 									},
 									{
@@ -662,8 +663,8 @@
 											"type": "Int32"
 										},
 										"sink": {
-											"type": "Int32",
-											"ordinal": 10
+											"name": "ProductModelID",
+											"type": "Int32"
 										}
 									},
 									{
@@ -672,8 +673,8 @@
 											"type": "DateTime"
 										},
 										"sink": {
-											"type": "DateTime",
-											"ordinal": 11
+											"name": "SellStartDate",
+											"type": "DateTime"
 										}
 									},
 									{
@@ -682,8 +683,8 @@
 											"type": "DateTime"
 										},
 										"sink": {
-											"type": "DateTime",
-											"ordinal": 12
+											"name": "SellEndDate",
+											"type": "DateTime"
 										}
 									},
 									{
@@ -692,8 +693,8 @@
 											"type": "DateTime"
 										},
 										"sink": {
-											"type": "DateTime",
-											"ordinal": 13
+											"name": "DiscontinuedDate",
+											"type": "DateTime"
 										}
 									},
 									{
@@ -702,8 +703,8 @@
 											"type": "Byte[]"
 										},
 										"sink": {
-											"type": "Byte[]",
-											"ordinal": 14
+											"name": "ThumbNailPhoto",
+											"type": "Byte[]"
 										}
 									},
 									{
@@ -712,8 +713,8 @@
 											"type": "String"
 										},
 										"sink": {
-											"type": "String",
-											"ordinal": 15
+											"name": "ThumbnailPhotoFileName",
+											"type": "String"
 										}
 									},
 									{
@@ -722,8 +723,8 @@
 											"type": "Guid"
 										},
 										"sink": {
-											"type": "Guid",
-											"ordinal": 16
+											"name": "rowguid",
+											"type": "Guid"
 										}
 									},
 									{
@@ -732,8 +733,8 @@
 											"type": "DateTime"
 										},
 										"sink": {
-											"type": "DateTime",
-											"ordinal": 17
+											"name": "ModifiedDate",
+											"type": "DateTime"
 										}
 									}
 								]
