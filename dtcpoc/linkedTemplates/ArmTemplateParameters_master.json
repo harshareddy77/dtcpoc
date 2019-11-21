@@ -8,11 +8,20 @@
 		"AzureBlobStorage_connectionString": {
 			"value": ""
 		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDatabricks1_accessToken": {
+			"value": ""
+		},
 		"MySql_connectionString": {
 			"value": ""
 		},
 		"SqlServer_connectionString": {
 			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://pocofdf.dfs.core.windows.net"
 		},
 		"localIR_properties_typeProperties_linkedInfo_resourceId": {
 			"value": "/subscriptions/db282dfb-bf66-4f42-acad-38a869fd392a/resourcegroups/datafactory/providers/Microsoft.DataFactory/factories/practicing/integrationruntimes/integrationRuntime"
