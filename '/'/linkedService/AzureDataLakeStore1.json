@@ -1,6 +1,5 @@
 {
 	"name": "AzureDataLakeStore1",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "AzureDataLakeStore",
@@ -10,5 +9,6 @@
 			"subscriptionId": "db282dfb-bf66-4f42-acad-38a869fd392a",
 			"resourceGroupName": "datafactory"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
