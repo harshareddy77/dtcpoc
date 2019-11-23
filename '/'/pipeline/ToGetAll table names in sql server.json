@@ -18,7 +18,7 @@
 					"source": {
 						"type": "SqlServerSource",
 						"sqlReaderQuery": {
-							"value": "SELECT name FROM sys.tables WHERE name like '%Product%'",
+							"value": "SELECT '['+SCHEMA_NAME(schema_id)+'].['+name+']'\nAS SchemaTable\nFROM sys.tables\nWHERE name LIKE '%Product%'",
 							"type": "Expression"
 						}
 					},
@@ -46,6 +46,7 @@
 						"value": "@activity('Lookup').output.value",
 						"type": "Expression"
 					},
+					"isSequential": true,
 					"activities": [
 						{
 							"name": "Copy data1",
@@ -62,7 +63,10 @@
 							"typeProperties": {
 								"source": {
 									"type": "SqlServerSource",
-									"sqlReaderQuery": "SELECT * FROM @{item().name}"
+									"sqlReaderQuery": {
+										"value": "SELECT * FROM @{item().SchemaTable}",
+										"type": "Expression"
+									}
 								},
 								"sink": {
 									"type": "DelimitedTextSink",
@@ -88,14 +92,8 @@
 									"referenceName": "csvinput",
 									"type": "DatasetReference",
 									"parameters": {
-										"windowStart": {
-											"value": "@utcnow()",
-											"type": "Expression"
-										},
-										"Table_Name": {
-											"value": "@{item().name}",
-											"type": "Expression"
-										}
+										"windowStart": "@utcnow()",
+										"Table_Name": "@{item().SchemaTable}"
 									}
 								}
 							]
