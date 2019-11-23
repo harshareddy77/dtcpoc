@@ -1,0 +1,43 @@
+{
+	"name": "pipeline6",
+	"properties": {
+		"activities": [
+			{
+				"name": "Lookup1",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource",
+						"sqlReaderQuery": {
+							"value": "SELECT '['+SCHEMA_NAME(schema_id)+'].['+name+']'\nAS SchemaTable\nFROM sys.tables\nWHERE name IN ('@{pipeline().parameters.Table_Name1}','@{pipeline().parameters.Table_Name2}')",
+							"type": "Expression"
+						}
+					},
+					"dataset": {
+						"referenceName": "source",
+						"type": "DatasetReference"
+					},
+					"firstRowOnly": false
+				}
+			}
+		],
+		"parameters": {
+			"Table_Name1": {
+				"type": "string"
+			},
+			"Table_Name2": {
+				"type": "string"
+			}
+		},
+		"annotations": []
+	}
+}
