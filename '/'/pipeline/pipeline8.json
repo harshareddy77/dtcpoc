@@ -136,7 +136,7 @@
 									},
 									"STATUS": {
 										"value": {
-											"value": "@activity('Copy data1').output.status",
+											"value": "@activity('Copy data1').output.executionDetails[0].status",
 											"type": "Expression"
 										},
 										"type": "String"
