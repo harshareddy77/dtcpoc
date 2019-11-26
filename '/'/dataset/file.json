@@ -1,5 +1,5 @@
 {
-	"name": "csvinput1",
+	"name": "file",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStore1",
@@ -10,11 +10,12 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureDataLakeStoreLocation",
-				"folderPath": "poc"
+				"fileName": "basic.txt",
+				"folderPath": "input"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
-			"firstRowAsHeader": true,
+			"firstRowAsHeader": false,
 			"quoteChar": "\""
 		},
 		"schema": []
