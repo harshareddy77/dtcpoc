@@ -22,7 +22,7 @@
 					"value": "@{formatDateTime(dataset().windowStart,'yyyy')}_@{formatDateTime(dataset().windowStart,'MM')}_@{formatDateTime(dataset().windowStart,'dd')}/@{dataset().Table_Name}.csv",
 					"type": "Expression"
 				},
-				"folderPath": "harsha"
+				"folderPath": "poc"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
