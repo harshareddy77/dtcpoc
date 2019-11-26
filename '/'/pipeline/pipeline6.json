@@ -19,6 +19,13 @@
 						"referenceName": "csvinput1",
 						"type": "DatasetReference"
 					},
+					"logStorageSettings": {
+						"linkedServiceName": {
+							"referenceName": "AzureDataLakeStorage1",
+							"type": "LinkedServiceReference"
+						},
+						"path": ""
+					},
 					"enableLogging": true,
 					"storeSettings": {
 						"type": "AzureDataLakeStoreReadSettings",
